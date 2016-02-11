@@ -1444,3 +1444,10 @@ java.lang.IllegalArgumentException: Source type cannot be null or empty
 !MESSAGE Errors occurred while refreshing git index
 !SUBENTRY 1 com.aptana.core 4 128 2016-02-11 12:03:37.583
 !MESSAGE fatal: bad revision 'HEAD'
+
+!ENTRY com.aptana.git.core 4 1 2016-02-11 12:10:29.259
+!MESSAGE Errors occurred while refreshing git index
+!SUBENTRY 1 com.aptana.core 4 128 2016-02-11 12:10:29.259
+!MESSAGE fatal: bad revision 'HEAD'
+!SUBENTRY 1 com.aptana.core 4 128 2016-02-11 12:10:29.259
+!MESSAGE fatal: bad revision 'HEAD'
