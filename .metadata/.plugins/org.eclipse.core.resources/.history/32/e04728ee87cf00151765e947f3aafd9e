@@ -1,0 +1,25 @@
+
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor: "#000",
+	title: "About Me",
+	textAllign: "center"
+});
+var navWindow = Ti.Ui.createNavigationWindow({
+	window: mainWindow
+});
+var clickButton = Ti.Ui.createView({
+	
+}) ;
+var nameText = Ti.UI.createLabel({
+	text: "Hello My name is Dylan Hunter",
+	textAllign: "center",
+	color: "#fff",
+	font: {fontSize: 40, fontFamily: "Cochin", fontWeight: "regular", fontStyle: "bold", }
+});
+var clickText = Ti.UI.createLabel({
+	text: "click here",
+	textAllign: "center",
+	color: "#fff"
+});
+mainWindow.add(nameText, clickText);
+navWindow.open();
