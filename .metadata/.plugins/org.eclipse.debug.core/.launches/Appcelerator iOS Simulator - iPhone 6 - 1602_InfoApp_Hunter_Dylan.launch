@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.appcelerator.titanium.mobile.ui.ios.simulator.launchConfigurationType">
+<stringAttribute key="ATTR_PROJECT_NAME" value="1602_InfoApp_Hunter_Dylan"/>
+<stringAttribute key="device_id" value="732D433C-D417-4074-B850-C88597BA101B"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/1602_InfoApp_Hunter_Dylan"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<stringAttribute key="process_factory_id" value="com.appcelerator.titanium.ui.logLevelFilteringProcessFactory"/>
+<stringAttribute key="sdk_version" value="9.1"/>
+<stringAttribute key="simulator_version" value="9.1"/>
+</launchConfiguration>

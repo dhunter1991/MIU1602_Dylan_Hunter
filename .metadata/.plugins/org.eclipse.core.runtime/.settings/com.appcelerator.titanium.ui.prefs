@@ -1,6 +1,8 @@
 =run
 1602_AboutMe_Hunter_Dylan\:launchMode=run
 1602_AboutMe_Hunter_Dylan\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.732D433C-D417-4074-B850-C88597BA101B
+1602_InfoApp_Hunter_Dylan\:launchMode=run
+1602_InfoApp_Hunter_Dylan\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.732D433C-D417-4074-B850-C88597BA101B
 LAST_LAUNCH_TIMESTAMP=1455059880023
 eclipse.preferences.version=1
 preference.show.console.onError=false

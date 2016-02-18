@@ -1,0 +1,161 @@
+var imagesFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var imageFiles = imagesFolder.getDirectoryListing();
+var pWidth = Ti.Platform.displayCaps.platformWidth;
+var pHeight = Ti.Platform.displayCaps.platformHeight;
+var actions = [
+		{title: "Caviler King Charles", 
+		//description: ,
+		image:"cavalier-king-charles-spaniel-06.jpg",
+		Breed:"Breed: Caviler King Charles", 
+		Weight:"Weight: 13 - 18 lbs",
+		LifeSpan:"Life Span: 9 - 14 years",
+		temperament:"Temperment: playful, adaptable, fearless, patient, and sociable." ,
+		colors:"Colors: Blenheim, Tri-­‐color, ruby, and black and tan"
+		activityLevel: "Activity Level: Moderate",
+		height:"Height: 12 - 13 in.",
+		hypoallergenic:"Hypoallergenic: no"}, 
+		{title:"Puggle", 
+		description:"In this new super hero movie Captian america gets into some trouble and it has grave consequences!",
+		image:"Charlie_the_Puggle.jpg",
+		Breed:
+		Weight:,
+		LifeSpan: ,
+		temperament: ,
+		colors:
+		activityLevel:
+		height:
+		hypoallergenic:"30%"}, 
+		{title:"Shih Tzu", 
+		description:"Amazing true story about a man from Africa who traveled here looking to live in the land of the free and eventually became a doctor. However when he discovers brain damage problems related to football players he finds out that it goes deeper than he thought and must fight to prove whats right.",
+		image:"653882-small-shih-tzu.jpg",
+		Breed:"Shih Tzu"
+		Weight:,
+		LifeSpan: ,
+		temperament: ,
+		colors:
+		activityLevel:
+		height:
+		hypoallergenic:
+		{title:"Siberian Husky",
+		image:"husky.jpg",
+		description:
+		Breed:
+		Weight:,
+		LifeSpan: ,
+		temperament: ,
+		colors:
+		activityLevel:
+		height:
+		hypoallergenic:	
+		},
+		{title: "Yorkshire Terrier",
+		image: "terrier.jpg",
+		description:
+		Breed:
+		Weight:,
+		LifeSpan: ,
+		temperament: ,
+		colors:
+		activityLevel:
+		height:
+		hypoallergenic:	
+		},
+	];
+  
+var dataWindow = Ti.UI.createWindow({
+		title: "Available Dogs",
+		backgroundColor: "#fff",
+	});
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: dataWindow
+	});
+var dataBorder = Ti.UI.createView({
+		backgroundColor: "dbdbdb",
+		height: 1,
+	});
+var movies = Ti.UI.createTableView({
+		top: dataBorder.top + dataBorder.height,
+	});
+var actionSection = Ti.UI.createTableViewSection({
+		headerTitle: "Action",
+		footerTitle: "2015-16"
+	});
+var movieSections = [actionSection];
+	movies.setData(movieSections);
+	dataWindow.add(dataBorder, movies, actionSection);
+	navWindow.open();
+
+
+	var getDetail = function(dataSource){
+		var detailWin = Ti.UI.createWindow({
+			title: dataSource.title,
+			image: "images/" + dataSource.image,
+			backgroundColor: "#9b05c1"
+		});
+	
+		var detailBorder = Ti.UI.createView({
+			backgroundColor: "dbdbdb",
+			height: 1,
+			top:0
+		});
+	
+		var movieText = Ti.UI.createLabel({
+			text: dataSource.desc,
+			color: "#fff",
+			font: {fontsize: 14, fontFamily: "arial", fontWeight: "regular"},
+			top: detailBorder.height + detailBorder.top + 300,
+			left: 10,
+			right: 10
+		});
+		var movieImage = Ti.UI.createImageView({
+			image: "images/" + dataSource.image,
+			top: 0,
+		});
+		var budgetLabel = Ti.UI.createLabel({
+			color: "#fff",
+			text: dataSource.budget,
+			font: {fontSize: 12, fontFamily: "arial", fontWeight: "regular"},
+			top: 230,
+			textAllign: "center"
+		});
+		var view = Ti.UI.createView({
+			backgroundColor: "#fff",
+			borderRadius: 10,
+			borderColor: "black",
+		    top: 260,
+			left:"25%",
+			right:"25%",
+			height:30
+		});
+		var totalView = Ti.UI.createView({
+			backgroundColor: "#000",
+			borderRadius: 10,
+			borderColor: "black",
+			top: 260,
+			left: "25%",
+			right: dataSource.budgetView,
+			height: 30
+		});
+		view.add(totalView);
+		detailWin.add(detailBorder, movieText, movieImage, view, totalView, budgetLabel);
+		navWindow.openWindow(detailWin);
+	};
+// for loop for movies and information inside the JSON object	
+	for(var i=0, j = actions.length; i<j; i++){
+	var theRow = Ti.UI.createTableViewRow({
+		title: actions[i].title,
+		desc: actions[i].description,
+		image: actions[i].image,
+		actors: actions[i].actors,
+		budget: actions[i].budget,
+		budgetView: actions[i].budgetView,
+		hasChild: true
+	});
+	actionSection.add(theRow);
+	};
+	movies.addEventListener("click", function(event){
+	getDetail(event.source);
+});
+//navWindow.open();
+
+
