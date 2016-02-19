@@ -16,12 +16,13 @@
 		var dogsImage = Ti.UI.createImageView({
 			image: "images/" + dataSource.image,
 			top: 0,
+			height: 300
 		});
 		var breedLabel = Ti.UI.createLabel({
 			color: "#fff",
 			text: dataSource.breed,
 			font: {fontSize: 12, fontFamily: "arial", fontWeight: "regular"},
-			top: 380,
+			top: 330,
 			left: 20,
 			textAllign: "center"
 		});
@@ -81,6 +82,14 @@
 			left: 20,
 			textAllign: "center"
 		});
+		var moreInfoButton = Ti.UI.createButton({
+			title: "more information",
+			top: 500,
+			width: 200,
+			height: 100,
+			font: {fontSize: 22, fontWeight: "bold"},
+			color: "black"
+		});
 		var buttonText = Ti.UI.createLabel({
 			text: "more information",
 			color: "fff",
@@ -95,8 +104,8 @@
 		});
 		// this opens all of the information needed on the page 
 		
-		button.add(buttonText);
-		detailWin.add(detailBorder,button, dogsImage, breedLabel, weightLabel, lifeSpanLabel, tempLabel, colorLabel, activityLabel, heightLabel, hypoLabel);
+		//button.add(buttonText);
+		detailWin.add(detailBorder, dogsImage, breedLabel, weightLabel, lifeSpanLabel, tempLabel, colorLabel, activityLabel, heightLabel, hypoLabel, moreInfoButton);
 		navWindow.openWindow(detailWin);
 // Window for more information page	
 
@@ -117,7 +126,7 @@
 		navWindow.openWindow(infoWin);
 
 	};
-	button.addEventListener("click", moreInfo);
+	moreInfoButton.addEventListener("click", moreInfo);
 	};
 // for loop to pull all of the information out of the JSON object 	
 

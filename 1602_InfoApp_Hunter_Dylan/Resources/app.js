@@ -86,6 +86,7 @@ var dogSection = Ti.UI.createTableViewSection({
 		headerTitle: "New Dogs",
 		footerTitle: "",
 });
+// load file that opens data file 
 var loadFile = require("data");
 var allSections = [dogSection];
 	dogs.setData(allSections);

@@ -3063,3 +3063,63 @@ Caused by: java.io.IOException: error=7, Argument list too long
 !MESSAGE fatal: bad revision 'HEAD'
 !SUBENTRY 1 com.aptana.core 4 128 2016-02-18 18:41:14.858
 !MESSAGE fatal: bad revision 'HEAD'
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 19:52:59.405
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/mobilesdk/osx
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 19:52:59.405
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/modules
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 19:53:46.601
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/mobilesdk/osx
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 19:53:46.601
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/modules
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 19:55:04.926
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/mobilesdk/osx
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 19:55:04.926
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/modules
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 19:55:37.479
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/mobilesdk/osx
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 19:55:37.479
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/modules
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 19:56:22.454
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/mobilesdk/osx
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 19:56:22.455
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/modules
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 19:58:59.385
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/mobilesdk/osx
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 19:58:59.385
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/modules
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 20:00:34.755
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/mobilesdk/osx
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 20:00:34.755
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/modules
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 20:02:00.205
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/mobilesdk/osx
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 20:02:00.206
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/modules
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 20:02:38.896
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/mobilesdk/osx
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 20:02:38.896
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/modules
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 20:03:03.818
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/mobilesdk/osx
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-02-18 20:03:03.818
+!MESSAGE (Build 4.4.0.201511182122) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/modules
