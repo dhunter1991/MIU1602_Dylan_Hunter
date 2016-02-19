@@ -3056,3 +3056,10 @@ Caused by: java.io.IOException: error=7, Argument list too long
 	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
 	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1028)
 	... 16 more
+
+!ENTRY com.aptana.git.core 4 1 2016-02-18 18:41:14.857
+!MESSAGE Errors occurred while refreshing git index
+!SUBENTRY 1 com.aptana.core 4 128 2016-02-18 18:41:14.857
+!MESSAGE fatal: bad revision 'HEAD'
+!SUBENTRY 1 com.aptana.core 4 128 2016-02-18 18:41:14.858
+!MESSAGE fatal: bad revision 'HEAD'
