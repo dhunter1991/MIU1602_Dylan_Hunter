@@ -90,21 +90,8 @@
 			font: {fontSize: 22, fontWeight: "bold"},
 			color: "black"
 		});
-		var buttonText = Ti.UI.createLabel({
-			text: "more information",
-			color: "fff",
-			textAllign: "center",
-		});
-		var button = Ti.UI.createView({
-			top: 550,
-			left: 100,
-			right: 100,
-			height: 50,
-			backgroundColor: "#2c2d2e", 
-		});
 		// this opens all of the information needed on the page 
 		
-		//button.add(buttonText);
 		detailWin.add(detailBorder, dogsImage, breedLabel, weightLabel, lifeSpanLabel, tempLabel, colorLabel, activityLabel, heightLabel, hypoLabel, moreInfoButton);
 		navWindow.openWindow(detailWin);
 // Window for more information page	
