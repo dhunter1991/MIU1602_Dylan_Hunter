@@ -1,0 +1,26 @@
+
+var win = Ti.UI.createWindow({
+	title: "Skate World News",
+	backgroundColor: "#fff"
+});
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: win
+});
+var user = Ti.UI.createTextField({
+	value: "username",
+	top: 200,
+});
+user.hintText = user.value;
+var password = Ti.UI.createTextField({
+	value: "password",
+	top: 250,
+});
+password.hintText = password.value;
+var create = Ti.UI.iOS.SystemButtonBordered({
+	text: "create account",
+});
+var signOn = Ti.UI.iOS.SystemButtonBordered({
+	text: "sign on"
+});
+win.add(user, password, create, signOn);
+navWindow.open();

@@ -1,0 +1,88 @@
+
+var win = Ti.UI.createWindow({
+	title: "Skate World News",
+	backgroundColor: "#fff"
+});
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: win
+});
+var user = Ti.UI.createTextField({
+	hintText: "username",
+	top: 200,
+	borderColor: "black",
+	width: 250,
+	height: 30
+});
+//user.hintText = user.value;
+var password = Ti.UI.createTextField({
+	hintText: "password",
+	top: 250,
+	borderColor: "black",
+	width: 250,
+	height: 30
+});
+//password.hintText = password.value;
+var create = Ti.UI.createButton({
+	title: "create account",
+	left: 20,
+	width: 150,
+	height: 50,
+	top: password.top + 50
+});
+var signOn = Ti.UI.createButton({
+	title: "sign on",
+	right: 20,
+	width: 150,
+	height: 50,
+	top: password.top + 50
+});
+var signUp = function (){
+	var signUpWin = Ti.UI.createWindow({
+		title: "sign up",
+		backgroundColor: "#fff"
+	});
+	var newUser = Ti.UI.createTextField({
+		hintText: "email adress",
+		top: 100,
+		borderColor: "black",
+		width: 250,
+		height: 30
+	});
+	var newPassword = Ti.UI.createTextField({
+		hintText: "password",
+		top: newUser.top + 75,
+		borderColor: "black",
+		width: 250,
+		height: 30
+	});
+	var confirm = Ti.UI.createTextField({
+		hintText: "password",
+		top: newPassword.top + 75,
+		borderColor: "black",
+		width: 250,
+		height: 30,
+	});
+	var cancel = Ti.UI.createButton({
+		title: "cancel",
+		right: 20,
+		width: 100,
+		height: 50,
+		bottom: 50,
+		borderRadius: 5,
+		backgroundColor: "grey"
+	});
+	var confirmButton = Ti.UI.createButton({
+		title: "create account",
+		left: 20,
+		width: 150,
+		height: 50,
+		bottom: 50,
+		borderRadius: 5,
+		BackgroundColor: "green"
+	});
+	signUpWin.add(newUser, newPassword, confirm, cancel, confirmButton);
+	navWindow.openWindow(signUpWin);
+};
+create.addEventListener("click", signUp);
+win.add(user, password, create, signOn);
+navWindow.open();

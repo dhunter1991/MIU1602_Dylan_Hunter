@@ -1,0 +1,15 @@
+var win = Ti.UI.createWindow({
+	backgroundColor: "black",
+});
+var label = Ti.UI.createLabel({
+	text: "click here"
+});
+var button = Ti.UI.createView({
+	top: 300,
+	left: 20,
+	Right: 20,
+	height: 50
+});
+button.add(label);
+win.add(button);
+win.open();

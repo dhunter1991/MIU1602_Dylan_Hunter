@@ -1,0 +1,184 @@
+var imagesFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var imageFiles = imagesFolder.getDirectoryListing();
+var skateboardNews = [
+{title: "Nyjah Huston",
+description: "Nyjah Huston Wins wins the recent stret competition at the pro contest in Newark, New Jersey.",
+image: "nyjah huston.jpg",
+},
+{title: "Kelvin Hoefler",
+description: "Hoefler qualified for the Nike SB SLS World Tour by placing third at the Tampa Pro contest, and on the tour he made the finals at every stop",
+image: "kelvin.jpg",
+},	
+{title: "Ryan Sheckler",
+description: "Ryan goes on the win another contest in portland at the latest stop on the dew tour.",
+image: "ryan sheckler.jpg",
+},
+
+];
+var win = Ti.UI.createWindow({
+	title: "Skate World magazine",
+	backgroundColor: "#fff"
+});
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: win
+});
+var user = Ti.UI.createTextField({
+	hintText: "username",
+	top: 200,
+	borderColor: "black",
+	width: 250,
+	height: 30
+});
+//user.hintText = user.value;
+var password = Ti.UI.createTextField({
+	hintText: "password",
+	top: 250,
+	borderColor: "black",
+	width: 250,
+	height: 30
+});
+//password.hintText = password.value;
+var create = Ti.UI.createButton({
+	title: "create account",
+	left: 20,
+	width: 150,
+	height: 50,
+	top: password.top + 50
+});
+var signOn = Ti.UI.createButton({
+	title: "sign on",
+	right: 20,
+	width: 150,
+	height: 50,
+	top: password.top + 50
+});
+var loggedOn = function(dataSource){
+	var fullPage = Ti.UI.createWindow({
+		title: "welcome to skate world news",
+		backgroundColor: "#fff"
+	});
+	var label = Ti.UI.createLabel({
+		text: "welcome to skate world news"
+	});
+	var search = Ti.UI.createSearchBar({
+		barColor: "#000",
+		showCancel:true,
+		height: 40,
+		top: 0
+	});
+	var dataBorder = Ti.UI.createView({
+		backgroundColor: "dbdbdb",
+		height: 1,
+	});
+	var skaters = Ti.UI.createTableView({
+		top: dataBorder.top + dataBorder.height,
+	});
+	var skaterSection = Ti.UI.createTableViewSection({
+		headerTitle: "skaters recent wins",
+		footerTitle: "",
+	});
+	var sections = [skaterSection];
+	skaters.setData(sections);
+	fullPage.add(label, search, skaters, skaterSection, dataBorder);
+	navWindow.openWindow(fullPage);
+	};
+	signOn.addEventListener("click", loggedOn);
+	var skatesView = function(){
+		var skaterWin = Ti.UI.createWindow({
+			title: dataSource.title,
+			backgroundColor: "#fff",
+		});
+		var images = Ti.UI.createImageView({
+			image: "images/" + dataSource.image,
+		});
+		var description = Ti.UI.createLabel({
+			text: dataSource.desc,
+		});
+		skaterWin.add(images, description);
+		navWindow.openWindow(skaterWin);
+		for(var i=0, j = skateboardNews.length; i<j; i++){
+			var theRow = Ti.UI.createTableViewRow({
+				layout: "absolute",
+				height: 50,
+				
+				image: skateboardNews[i].image,
+				title: skateboardNews[i].title,
+				desc: skateboradNews[i].description
+			});
+			var image = Ti.UI.createImageView({
+				image: "images/" + skateBoardNews[i].image,
+				width: 50,
+				width: 50,
+				left: 5,
+			});
+			var text = Ti.UI.createLabel({
+				text: skateboardNews[i].title,
+				textAllign: "center",
+				color: "blue",
+				font: {fontSize: 16, fontFamily: "arial", fontWeight: "bold"}
+			});
+		};
+		theRow.add(image, text);
+		dogSection.add(theRow);	
+	};
+	skaters.addEventListener("click", function(event){
+	getDetail(event.source);
+	});
+	
+var signUp = function (){
+	var signUpWin = Ti.UI.createWindow({
+		title: "sign up",
+		backgroundColor: "#fff"
+	});
+	var newUser = Ti.UI.createTextField({
+		hintText: "email adress",
+		top: 100,
+		borderColor: "black",
+		width: 250,
+		height: 30,
+		left: 20
+	});
+	var newPassword = Ti.UI.createTextField({
+		hintText: "password",
+		top: newUser.top + 75,
+		borderColor: "black",
+		width: 250,
+		height: 30,
+		left: 20
+	});
+	var confirm = Ti.UI.createTextField({
+		hintText: "password",
+		top: newPassword.top + 75,
+		borderColor: "black",
+		width: 250,
+		height: 30,
+		left: 20
+	});
+	var cancel = Ti.UI.createButton({
+		title: "cancel",
+		right: 20,
+		width: 150,
+		height: 50,
+		bottom: 50,
+		borderRadius: 5,
+		backgroundColor: "black"
+	});
+	var confirmButton = Ti.UI.createButton({
+		title: "confirm account",
+		left: 20,
+		width: 150,
+		height: 50,
+		bottom: 50,
+		borderRadius: 5,
+		BackgroundColor: "green"
+	});
+	var closeWindow = function(){
+		signUpWin.close();
+	};
+	cancel.addEventListener("click", closeWindow);
+	signUpWin.add(newUser, newPassword, confirm, cancel, confirmButton);
+	navWindow.openWindow(signUpWin);
+};
+create.addEventListener("click", signUp);
+win.add(user, password, create, signOn);
+navWindow.open();

@@ -3,8 +3,14 @@
 1602_AboutMe_Hunter_Dylan\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.732D433C-D417-4074-B850-C88597BA101B
 1602_InfoApp_Hunter_Dylan\:launchMode=run
 1602_InfoApp_Hunter_Dylan\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.732D433C-D417-4074-B850-C88597BA101B
-LAST_LAUNCH_TIMESTAMP=1455059880023
+1602_UtilityApp_Hunter_Dylan\:launchMode=run
+1602_UtilityApp_Hunter_Dylan\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.732D433C-D417-4074-B850-C88597BA101B
+LAST_LAUNCH_TIMESTAMP=1456276939092
 eclipse.preferences.version=1
+practice2_dylan\:launchMode=run
+practice2_dylan\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.80AA200F-80E5-4F27-9E54-579E659D12D8
+practice_dylan\:launchMode=run
+practice_dylan\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.732D433C-D417-4074-B850-C88597BA101B
 preference.show.console.onError=false
 preference.studio.perspective.version=103
 project1_dylan_hunter\:launchMode=run

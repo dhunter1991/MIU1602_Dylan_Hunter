@@ -1,0 +1,34 @@
+
+var win = Ti.UI.createWindow({
+	title: "Skate World News",
+	backgroundColor: "#fff"
+});
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: win
+});
+var user = Ti.UI.createTextField({
+	hintText: "username",
+	top: 200,
+});
+//user.hintText = user.value;
+var password = Ti.UI.createTextField({
+	hintText: "password",
+	top: 250,
+});
+//password.hintText = password.value;
+var create = Ti.UI.createButton({
+	title: "create account",
+	left: 20,
+	width: 150,
+	height: 50,
+	top: password.top + 50
+});
+var signOn = Ti.UI.createButton({
+	title: "sign on",
+	right: 20,
+	width: 150,
+	height: 50,
+	top: password.top + 50
+});
+win.add(user, password, create, signOn);
+navWindow.open();
