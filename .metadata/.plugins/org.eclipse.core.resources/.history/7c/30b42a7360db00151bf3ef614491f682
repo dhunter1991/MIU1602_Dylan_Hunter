@@ -70,6 +70,24 @@ var signOn = Ti.UI.createButton({
 	backgroundColor: "green",
 	top: password.top + 50
 });
+var logoutButton = Ti.UI.createButton({
+	text: "logout"
+});
+// function for the logout navigation
+var logoutbutton = function(){
+	var logoutWin = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		exitOnClose: true,
+		fullScreen: false
+	});
+	var dialog2 = Ti.UI.createDialog({
+		message: "are you sure you want to logout?",
+		ok: "continue",
+		title: "logout"
+	});
+	dialog2.show();
+};
+logout.addEventListener("click", logoutbutton);
 // function for the alert dialog
 var checkUserName = function(){
 		var confirmUserWindow = Ti.UI.createWindow({
@@ -91,7 +109,6 @@ var loggedOn = function(){
 		title: "welcome to skate world news",
 		backgroundColor: "#e8e5eb"
 	});
-	fullPage.setRightNavButton(logout);
 	var label = Ti.UI.createLabel({
 		text: "welcome to skate world news"
 	});
@@ -124,7 +141,6 @@ var loggedOn = function(){
 			title: dataSource.title,
 			backgroundColor: "#fff",
 		});
-		skaterWin.setRightNavButton(logout);
 		var images = Ti.UI.createImageView({
 			image: "images/" + dataSource.image,
 			top: 0,
@@ -136,8 +152,6 @@ var loggedOn = function(){
 			left: 5,
 			right: 5
 		});
-		win.setRightNavButton(logout);
-
 		skaterWin.add(images, description);
 		navWindow.openWindow(skaterWin);
 	};
@@ -254,24 +268,6 @@ var signUp = function (){
 	};
 	cancel.addEventListener("click", closeWindow);
 };
-var logoutbutton = function(){
-	var logoutWin = Ti.UI.createWindow({
-		backgroundColor: "#fff",
-		exitOnClose: true,
-		fullScreen: false
-	});
-	var dialog2 = Ti.UI.createAlertDialog({
-		message: "are you sure you want to logout?",
-		ok: "continue",
-		cancel: "cancel",
-		title: "logout"
-	});
-	dialog2.show();
-	navWindow.close();
-	win.open();
-	navWindow.open();
-};
-logout.addEventListener("click", logoutbutton);
 // opens navigation window and main window
 create.addEventListener("click", signUp);
 win.add(user, password, create, signOn, userExample);

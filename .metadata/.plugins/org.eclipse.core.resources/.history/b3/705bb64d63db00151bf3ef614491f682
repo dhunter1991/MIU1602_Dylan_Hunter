@@ -263,7 +263,6 @@ var logoutbutton = function(){
 	var dialog2 = Ti.UI.createAlertDialog({
 		message: "are you sure you want to logout?",
 		ok: "continue",
-		cancel: "cancel",
 		title: "logout"
 	});
 	dialog2.show();

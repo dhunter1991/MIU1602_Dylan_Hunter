@@ -21,10 +21,13 @@ var win = Ti.UI.createWindow({
 	title: "Skate World magazine",
 	backgroundColor: "#e8e5eb"
 });
+var logout = Ti.UI.createButton({
+	title: "logout"
+});
 // opens navigation window
 var navWindow = Ti.UI.iOS.createNavigationWindow({
 	window: win,
-	rightNavButtons: [logoutButton]
+	rightNavButtons: logout
 });
 // username text feild 
 var user = Ti.UI.createTextField({
@@ -34,6 +37,12 @@ var user = Ti.UI.createTextField({
 	width: 250,
 	height: 30,
 	backgroundColor: "#fff"
+});
+var userExample = Ti.UI.createLabel({
+	text: "Example: dhunter1@fullsail.edu",
+	top: user.top + user.height,
+	font: {fontSize: 10, fontFamily: "arial", fontWeight: "regular"},
+	left: 62
 });
 // password text feild 
 var password = Ti.UI.createTextField({
@@ -61,9 +70,6 @@ var signOn = Ti.UI.createButton({
 	backgroundColor: "green",
 	top: password.top + 50
 });
-var logoutButton = Ti.UI.createButton({
-	text: "logout"
-});
 // function for the alert dialog
 var checkUserName = function(){
 		var confirmUserWindow = Ti.UI.createWindow({
@@ -85,6 +91,7 @@ var loggedOn = function(){
 		title: "welcome to skate world news",
 		backgroundColor: "#e8e5eb"
 	});
+	fullPage.setRightNavButton(logout);
 	var label = Ti.UI.createLabel({
 		text: "welcome to skate world news"
 	});
@@ -117,6 +124,7 @@ var loggedOn = function(){
 			title: dataSource.title,
 			backgroundColor: "#fff",
 		});
+		skaterWin.setRightNavButton(logout);
 		var images = Ti.UI.createImageView({
 			image: "images/" + dataSource.image,
 			top: 0,
@@ -128,6 +136,8 @@ var loggedOn = function(){
 			left: 5,
 			right: 5
 		});
+		win.setRightNavButton(logout);
+
 		skaterWin.add(images, description);
 		navWindow.openWindow(skaterWin);
 	};
@@ -176,6 +186,12 @@ var signUp = function (){
 		left: 20,
 		backgroundColor: "#fff"
 	});
+	var userExample2 = Ti.UI.createLabel({
+		text: "Example: dhunter1@fullsail.edu",
+		top: newUser.top + newUser.height + 5,
+		font: {fontSize: 10, fontFamily: "arial", fontWeight: "regular"},
+		left: 20
+	});
 	var newPassword = Ti.UI.createTextField({
 		hintText: " password",
 		top: newUser.top + 75,
@@ -187,7 +203,7 @@ var signUp = function (){
 		backgroundColor: "#fff"
 	});
 	var confirm = Ti.UI.createTextField({
-		hintText: " password",
+		hintText: " confirm password",
 		top: newPassword.top + 75,
 		borderColor: "black",
 		width: 320,
@@ -214,7 +230,7 @@ var signUp = function (){
 		borderRadius: 5,
 		BackgroundColor: "green"
 	});
-	signUpWin.add(newUser, newPassword, confirm, cancel, confirmButton);
+	signUpWin.add(newUser, newPassword, confirm, cancel, confirmButton, userExample2);
 	navWindow.openWindow(signUpWin);
 // this function runs a control to inform user that account has been created and sends them back to the log in page
 	var confirmWin = function(){
@@ -238,7 +254,25 @@ var signUp = function (){
 	};
 	cancel.addEventListener("click", closeWindow);
 };
+var logoutbutton = function(){
+	var logoutWin = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		exitOnClose: true,
+		fullScreen: false
+	});
+	var dialog2 = Ti.UI.createAlertDialog({
+		message: "are you sure you want to logout?",
+		ok: "continue",
+		cancel: "cancel",
+		title: "logout"
+	});
+	dialog2.show();
+	navWindow.close();
+	win.open();
+	navWindow.open();
+};
+logout.addEventListener("click", logoutbutton);
 // opens navigation window and main window
 create.addEventListener("click", signUp);
-win.add(user, password, create, signOn);
+win.add(user, password, create, signOn, userExample);
 navWindow.open();
